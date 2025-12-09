@@ -21,3 +21,4 @@ jobs:
       - name: Test AWS commands
         run: |
           aws s3 ls
+          ##
