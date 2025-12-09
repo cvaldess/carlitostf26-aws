@@ -71,4 +71,3 @@ Puedes personalizar la configuración en `variables.tf` o pasando flags:
 ```bash
 terraform apply -var="region=eu-west-1" -var="vpc_cidr=192.168.0.0/16"
 ```
-test one
