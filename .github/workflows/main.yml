@@ -17,7 +17,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::701604998619:role/GitHubAction-AssumeRoleWithAction
-          aws-region: us-east-1
+          aws-region: eu-west-1
       - name: Test AWS commands
         run: |
           aws s3 ls
