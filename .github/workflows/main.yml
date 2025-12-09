@@ -1,0 +1,23 @@
+name: AWSTest
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-aws:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: <Rol creado en terraform>
+          aws-region: us-east-1
+      - name: Test AWS commands
+        run: |
+          aws s3 ls
