@@ -16,7 +16,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: <Rol creado en terraform>
+          role-to-assume: arn:aws:iam::701604998619:role/GitHubAction-AssumeRoleWithAction
           aws-region: us-east-1
       - name: Test AWS commands
         run: |
